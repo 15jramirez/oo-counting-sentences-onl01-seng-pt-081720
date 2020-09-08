@@ -27,7 +27,10 @@ class String
   end
 
   def count_sentences
-  self.split (/[.!?]+/).count
-binding.pry
+  if self.split.count == nil
+    "0" 
+  else
+    self.split(/[.?!]+/).grep(/\S/).count
   end
+end
 end
